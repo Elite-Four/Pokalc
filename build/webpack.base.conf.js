@@ -31,6 +31,9 @@ module.exports = {
   resolveLoader: {
     fallback: [path.join(__dirname, '../node_modules')]
   },
+  sassLoader: {
+    includePaths: [path.resolve(__dirname, "../node_modules/bulma")]
+  },
   module: {
     preLoaders: [
       {
