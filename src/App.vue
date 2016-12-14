@@ -17,7 +17,8 @@ export default {
 </script>
 
 <style lang="sass">
-$primary: #ee1515 // The color of Pokeball
+$primary: #ee1515 // The primary color of Pokeball
+$text: #f0f0f0 // The secondary color of bottom of Pokeball
 
 @import 'bulma'
 
