@@ -7,7 +7,7 @@
 export default {
   props: {
     size: {
-      type: [String, Number]
+      type: [String, Number, Object]
     },
     offset: {
       type: [Number, String]
@@ -41,8 +41,15 @@ export default {
       }
       const isNarrowAll = isNarrow.mobile && isNarrow.tablet && isNarrow.desktop
 
+      // Responsive size
+
+      const responsiveSize = typeof size === 'object'
+
       return {
-        [`is-${size}`]: size
+        [`is-${size.mobile}-mobile`]: responsiveSize && size.mobile,
+        [`is-${size.tablet}-tablet`]: responsiveSize && size.tablet,
+        [`is-${size.desktop}-desktop`]: responsiveSize && size.desktop,
+        [`is-${size}`]: !responsiveSize && size
         [`is-offset-${offset}`]: offset
         'is-narrow': isNarrowAll
         'is-narrow-mobile': !isNarrowAll && isNarrow.mobile,
