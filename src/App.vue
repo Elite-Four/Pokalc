@@ -1,8 +1,8 @@
-<template>
-  <div id="app" class="button is-primary">
-    <img src="./assets/logo.png">
-    <hello></hello>
-  </div>
+<template lang="pug">
+#app
+  nav
+    router-link(to="/overall") Overall Calculator
+    router-view
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
 
 <style lang="sass">
 $primary: #ee1515 // The primary color of Pokeball
-$text: #f0f0f0 // The secondary color of bottom of Pokeball
+// $text: #f0f0f0 // The secondary color of bottom of Pokeball
 
 @import 'bulma'
 
