@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Vuex from 'vuex'
 import VueRouter from 'vue-router'
 import axios from 'axios'
+import 'bulma/css/bulma.css'
+
 import App from './App'
 
 Vue.use(Vuex)
